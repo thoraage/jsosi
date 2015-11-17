@@ -45,7 +45,9 @@ public class IOUtils {
 
     public static final void silentClose(Closeable closeable) {
         try {
-            closeable.close();
+            if (closeable != null) {
+                closeable.close();
+            }
         } catch (IOException e) {
             // ignore
         }

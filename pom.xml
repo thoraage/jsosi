@@ -4,14 +4,18 @@
     <groupId>no.jsosi</groupId>
     <artifactId>jsosi</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.9-SNAPSHOT</version>
+    <!--
+        Backported from java 1.7 in order to run on Vegloggen on Vegdirektoratet. Remove and replace with original when
+        Vegloggen has been upgraded. Repository at: https://github.com/thoraage/jsosi
+    -->
+    <version>1.0.8-BACKPORTED</version>
     <name>jsosi</name>
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compile.source>1.7</maven.compile.source>
-        <maven.compile.target>1.7</maven.compile.target>
+        <maven.compile.source>1.6</maven.compile.source>
+        <maven.compile.target>1.6</maven.compile.target>
     </properties>
     <dependencies>
         <dependency>

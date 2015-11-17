@@ -232,7 +232,7 @@ public class SosiReader implements Closeable {
 
     static List<Coordinate> readCoordinateLines(BufferedReader reader, double xyfactor, int dim) throws IOException {
 
-        List<Coordinate> coords = new ArrayList<>();
+        List<Coordinate> coords = new ArrayList<Coordinate>();
         
         reader.mark(100);
         while (true) {

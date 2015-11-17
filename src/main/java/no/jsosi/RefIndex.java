@@ -27,7 +27,7 @@ class RefIndex implements Closeable {
     private FileChannel channel;
     private final double xyfactor;
 
-    private final Map<Integer, Long> posById = new HashMap<>();
+    private final Map<Integer, Long> posById = new HashMap<Integer, Long>();
     private final Set<Integer> allRefs = new HashSet<Integer>();
 
     private byte[] pattern = new byte[] { '.', 'K', 'U', 'R', 'V', 'E', ' ' };
@@ -118,7 +118,7 @@ class RefIndex implements Closeable {
             return null;
         }
 
-        List<Coordinate> coords = new ArrayList<>();
+        List<Coordinate> coords = new ArrayList<Coordinate>();
 
         if (!channel.isOpen()) {
             System.out.println("whatt?");
